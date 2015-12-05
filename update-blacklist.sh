@@ -2,6 +2,8 @@
 
 # usage update-blacklist.sh <configuration file>
 # eg: update-blacklist.sh /etc/ipset-blacklist/ipset-blacklist.conf
+source /etc/ipset-blacklist/ipset-blacklist.conf
+
 if [[ -z "$1" ]] || ! source "$1"; then
     echo "Can't load configuration file $1"
     exit 1
